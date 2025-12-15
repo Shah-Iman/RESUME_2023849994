@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skills</title>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body style="background-color: #000000;">
+
+<header style="padding-top: 0;">
+
+<nav>
+    <a href="index.html" target="_self">HOME</a>
+    <a href="biodata.html" target="_self">BIODATA</a>
+    <a href="education.html" target="_self">EDUCATION</a>
+    <a href="experience.html" target="_self">EXPERIENCE</a>
+    <a href="skills.html" target="_self">SKILLS</a>    
+    <a href="interests.html" target="_self">INTERESTS</a>
+    <a href="contact.html" target="_self">CONTACT</a>
+</nav>
+
+<div class="marquee5">
+<h1>SKILLS</h1>
+</div>
+</header>
+
+<p id="demo"></p>
+
+<section class="skills-section">
+ <p>These are my key skills across different areas. Watch the circular bars fill with neon glow as you scroll!</p>
+   <div class="skills-parallax">  
+    <div class="skills-container">
+
+      <div class="skill-card" data-percentage="90">
+        <div class="skill-icon">🎬</div>
+        <h3>Video & Design Tools</h3>
+        <div class="skill-bar">
+          <div class="skill-fill" title="75%" data-percentage="75%">Premiere Pro</div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" title="65%" data-percentage="65%">Canva</div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" title="80%" data-percentage="80%">CapCut</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">💻</div>
+        <h3>Web / Coding Skills</h3>
+        <div class="skill-bar">
+          <div class="skill-fill" title="65%" data-percentage="65%">HTML</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">📊</div>
+        <h3>Office Tools</h3>
+        <div class="skill-bar">
+          <div class="skill-fill" title="95%" data-percentage="95%">Microsoft Word</div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" title="60%" data-percentage="60%">Excel</div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" title="70%" data-percentage="70%">PowerPoint</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">📚</div>
+        <h3>Library Skills</h3>
+        <div class="skill-bar">
+          <div class="skill-fill" title="85%" data-percentage="85%">Cataloging</div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" title="80%" data-percentage="80%">Classification</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<footer>Copyright &copy; SHAHIDUL IMAN</footer>
+
+<script>
+// Animate skill bars when they scroll into view
+const skillFills = document.querySelectorAll('.skill-fill');
+
+function animateSkills() {
+  skillFills.forEach(fill => {
+    const rect = fill.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 50){
+      fill.style.width = fill.getAttribute('data-percentage');
+    }
+  });
+}
+
+window.addEventListener('scroll', animateSkills);
+window.addEventListener('load', animateSkills);
+
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
