@@ -501,6 +501,13 @@ ol.centered-list {
   gap: 4px;
 }
 
+.class-thumb {
+  display: block;
+  width: 100px;
+  height: 70px;
+  flex-shrink: 0;
+}
+
 .edu-panel .class-thumb img {
   width: 100px;
   height: 70px;
@@ -937,3 +944,4 @@ ol.centered-list {
 .contact-card:hover .card-overlay {
   opacity: 1;
 }
+
